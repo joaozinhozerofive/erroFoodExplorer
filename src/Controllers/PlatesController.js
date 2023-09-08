@@ -69,7 +69,7 @@ class PlatesController {
         .update(updatedPlates)
         .where({plate_id})
 
-        const ingredientsUpdated = ingredients.map(ingredient =>ingredient)
+        const [ingredientsUpdated] = ingredients.map(ingredient =>ingredient)
         
 
         await knex("tags")
